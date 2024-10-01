@@ -1,0 +1,9 @@
+.bars {
+  font-size: 1rem;
+}
+
+.avatar {
+  font-size: 3rem;
+  transform: translateY(1px);
+  color: darkgrey;
+}
