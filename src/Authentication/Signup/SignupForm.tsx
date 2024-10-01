@@ -3,8 +3,8 @@ import Button from "../../shared-UI/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import classes from "./SignupForm.module.css";
-import { UserSignupInformation } from "../../../../backend/src/shared/dtos";
 import useRequiredAuthContext from "../../hooks/use-required-authContext";
+import { UserSignupInformation } from "../../helpers/dtos";
 
 interface SignFormInputValidation {
   email: boolean;
