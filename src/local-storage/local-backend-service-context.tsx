@@ -25,6 +25,7 @@ import {
   RetrieveValue,
   IPlace,
 } from "../local-storage/local-storage-types";
+import { initialUsers } from "./DUMMY-DATA";
 
 // REMEMBER TO SET INITIAL LOCAL STORAGE **********************
 // REMEMBER TO manage user picture type **********************
@@ -35,7 +36,10 @@ class LocalBackendService implements BackendService {
   // global
   setLocalStorageKeys = () => {
     if (!localStorage.getItem(LocalStorageKeys.Users)) {
-      localStorage.setItem(LocalStorageKeys.Users, JSON.stringify([]));
+      localStorage.setItem(
+        LocalStorageKeys.Users,
+        JSON.stringify(initialUsers)
+      );
     }
     if (!localStorage.getItem(LocalStorageKeys.LoggedUsers)) {
       localStorage.setItem(LocalStorageKeys.LoggedUsers, JSON.stringify([]));
