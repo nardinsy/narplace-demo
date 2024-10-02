@@ -8,19 +8,13 @@ import PlacePage from "./places/pages/PlacePage";
 import Users from "./user/pages/Users";
 import useRequiredAuthContext from "./hooks/use-required-authContext";
 import ToastList from "./toast/ToastList";
+import { HashRouter as Router } from "react-router-dom";
 
 const App: React.FC = (porps) => {
   const authContext = useRequiredAuthContext();
 
-  // const ws = new WebSocketImpl();
-  // ws.test();
-
-  // const ws = connectWebSocket();
-  // ws.connect();
-  // ws.welcome();
-
   return (
-    <>
+    <Router>
       <MainHeader />
       <ToastList />
 
@@ -45,7 +39,7 @@ const App: React.FC = (porps) => {
       </Route>
 
       {authContext.isLoggedin && <Authorized />}
-    </>
+    </Router>
   );
 };
 
