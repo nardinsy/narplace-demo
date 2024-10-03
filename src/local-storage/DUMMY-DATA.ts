@@ -44,10 +44,12 @@ const initialUsers = [
         ],
         replies: [],
         creator: "1",
-        pictureUrl: "./assets/place1.jpg",
+        pictureUrl:
+          "https://images.pexels.com/photos/5620964/pexels-photo-5620964.jpeg?auto=compress&cs=tinysrgb&w=600",
       },
     ],
-    picture: "./assets/user1.jpg",
+    picture:
+      "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     oldNotifications: [],
     newNotifications: [],
   },
@@ -59,7 +61,7 @@ const initialUsers = [
     places: [
       {
         placeId: 22,
-        title: "Bolivian Amazon Jungle.",
+        title: "Bolivian Amazon Jungle",
         description:
           "Serene Amazon Rainforest with Lush Greenery Reflected in River",
         address: "Manaus, AM, Brasil",
@@ -91,10 +93,12 @@ const initialUsers = [
         ],
         replies: [],
         creator: "2",
-        pictureUrl: "./assets/place2.jpg",
+        pictureUrl:
+          "https://images.pexels.com/photos/1174138/pexels-photo-1174138.jpeg?auto=compress&cs=tinysrgb&w=600",
       },
     ],
-    picture: "./assets/user2.jpg",
+    picture:
+      "https://images.pexels.com/photos/1898555/pexels-photo-1898555.jpeg?auto=compress&cs=tinysrgb&w=600",
     oldNotifications: [],
     newNotifications: [],
   },

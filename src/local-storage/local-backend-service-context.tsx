@@ -33,9 +33,9 @@ import { initialUsers } from "./DUMMY-DATA";
 // TODO: REMEMBER TO cahnge createAbsoluteApiAddress in api-url
 
 class LocalBackendService implements BackendService {
-  // global
   setLocalStorageKeys = () => {
     if (!localStorage.getItem(LocalStorageKeys.Users)) {
+      console.log("here");
       localStorage.setItem(
         LocalStorageKeys.Users,
         JSON.stringify(initialUsers)
