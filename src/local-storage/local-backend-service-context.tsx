@@ -491,15 +491,16 @@ class LocalBackendService implements BackendService {
   getComments(placeId: string): Promise<CommentDto[]> {
     const users = this.getValueFromLocalStorage(LocalStorageKeys.Users);
 
-    let commentDto: CommentDto[] = [];
+    let commentDtos: CommentDto[] = [];
+
     users.forEach((user) => {
       const place = user.places.find((p) => p.placeId === placeId);
       if (place) {
-        commentDto = place.comments;
+        commentDtos = place.comments;
       }
     });
 
-    return Promise.resolve(commentDto);
+    return Promise.resolve(commentDtos);
   }
 
   checkIfCommentIsParent = (
@@ -868,6 +869,10 @@ const LocalBackendContex = createContext<BackendService | undefined>(undefined);
 export const LocalBackendContextProvider: FC<HasChildren> = ({ children }) => {
   const service = new LocalBackendService();
   service.setLocalStorageKeys();
+
+  window.addEventListener("unload", () => {
+    localStorage.clear();
+  });
   return (
     <LocalBackendContex.Provider value={service}>
       {children}
